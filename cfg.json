@@ -1,56 +1,97 @@
 {
-  "breadcrumbs.enabled": false,
-  "editor.cursorStyle": "line-thin",
-  "editor.fontFamily": "JetBrains Mono",
-  "editor.fontLigatures": true,
   "editor.fontSize": 12,
   "editor.fontWeight": "300",
-  "editor.formatOnSave": true,
   "editor.lineHeight": 22,
-  "editor.suggestSelection": "first",
-  "editor.tabSize": 2,
-  "editor.wordWrapColumn": 100,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "JetBrains Mono",
   "explorer.autoReveal": false,
-  "explorer.enableDragAndDrop": false,
-  "files.autoSave": "onFocusChange",
-  "prettier.useEditorConfig": false,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.zoomLevel": 1,
-  "workbench.colorTheme": "Tokyo Night Storm",
-  "workbench.editor.enablePreview": false,
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Tokyo Night Light",
+  "editor.tokenColorCustomizations": {
+    "[Community Material Theme Darker]": {
+      "comments": "#56618f"
+    }
+  },
   "workbench.colorCustomizations": {
+    "[Tokyo Night Light]": {
+      "editor.background": "#d9d9dd",
+      "sideBar.background": "#d6d6db",
+      "terminal.background": "#d6d6db",
+      "editor.lineHighlightBackground": "#d6d6db",
+      "list.activeSelectionBackground": "#ceced4"
+    },
     "[Tokyo Night Storm]": {
-      "sideBar.background": "#0b1b2f",
       "activityBar.activeBackground": "#0a2957",
       "activityBar.background": "#000000",
       "activityBar.activeBorder": "#1259c4",
+      // editor popup
+      "editorSuggestWidget.background": "#0b1b2f",
+      "editorSuggestWidget.highlightForeground": "#5682c4",
+      "editorHoverWidget.background": "#0b1b2f",
+      "dropdown.background": "#0b1b2f",
+      "dropdown.foreground": "#2e4663",
+      // editor
       "editor.background": "#19273f",
       "editor.lineHighlightBackground": "#142642",
+      "editorGroupHeader.tabsBackground": "#0b1b2f",
+      "editorGroupHeader.noTabsBackground": "#0b1b2f",
+      "breadcrumb.background": "#0b1b2f",
+      "input.background": "#091627",
+      // terminal
       "terminal.background": "#0b1b2f",
       "tab.activeBackground": "#142642",
       "tab.activeBorder": "#142642",
       "panel.background": "#0b1b2f",
       "statusBar.background": "#081524",
-      "breadcrumb.background": "#0b1b2f",
-      "editorGroupHeader.tabsBackground": "#0b1b2f",
-      "editorGroupHeader.noTabsBackground": "#0b1b2f",
+      // tabs
       "tab.inactiveBackground": "#0b1b2f",
       "tab.activeForeground": "#6c7c91",
-      "input.background": "#091627",
+      // panel
       "panelTitle.activeBorder": "#104391",
       "panelTitle.inactiveForeground": "#2e4663",
       "panelTitle.activeForeground": "#6c7c91",
-      "dropdown.background": "#0b1b2f",
-      "dropdown.foreground": "#2e4663",
+      // list
       "list.activeSelectionBackground": "#104391",
       "list.inactiveSelectionBackground": "#050e18",
       "list.hoverBackground": "#07111d",
+
+      // sidbar
+      "sideBar.background": "#0b1b2f",
       "sideBarSectionHeader.background": "#081422",
-      "editorSuggestWidget.background": "#0b1b2f",
       "sideBar.foreground": "#9da0b9",
-      "editorSuggestWidget.highlightForeground": "#5682c4",
-      "editorHoverWidget.background": "#0b1b2f"
+      // scrollbar
+      "scrollbarSlider.background": "#22344b",
+      "scrollbarSlider.hoverBackground": "#2e4663",
+      "scrollbarSlider.activeBackground": "#2e4663"
     }
-  }
+  },
+  "files.autoSave": "onFocusChange",
+  "editor.tabSize": 2,
+  "editor.cursorStyle": "line-thin",
+  "editor.wordWrapColumn": 100,
+  "window.zoomLevel": 1,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.formatOnSave": true,
+  "prettier.useEditorConfig": false,
+  "workbench.editor.enablePreview": false,
+  "cSpell.userWords": ["devtool", "firestore"],
+  "breadcrumbs.enabled": false,
+  "workbench.startupEditor": "none",
+  "material-icon-theme.activeIconPack": "react_redux",
+  "workbench.statusBar.visible": false,
+  "material-icon-theme.folders.associations": {
+    "elm": "functions",
+    "session": "core",
+    "proxy": "ngrx-store",
+    "nginx": "ngrx-store"
+  },
+  "material-icon-theme.hidesExplorerArrows": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "emmet.includeLanguages": {
+    "nunjucks": "html"
+  },
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  "javascript.preferences.quoteStyle": "single"
 }
