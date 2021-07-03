@@ -1,0 +1,8 @@
+{
+  "import React": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "imr",
+    "body": ["import React from 'react'"],
+    "description": "import React from 'react'"
+  }
+}
