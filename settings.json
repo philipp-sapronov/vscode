@@ -1,12 +1,84 @@
 {
+  // * common
+  "update.showReleaseNotes": false,
+  "breadcrumbs.enabled": false,
+  // * javascript/typescript
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.suggest.paths": false,
+  // * window
+  "window.title": "${activeEditorLong}${separator}${rootName}",
+  "window.newWindowDimensions": "inherit",
+  // * workbench
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "workbench.editor.decorations.badges": true,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.tabSizing": "short",
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
+  // * explorer
+  "explorer.autoReveal": false,
+  "explorer.compactFolders": false,
+  "explorer.sortOrder": "type",
+  // * editor
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorStyle": "line-thin",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
   "editor.fontSize": 12,
   "editor.fontWeight": "300",
+  "editor.formatOnSave": true,
+  "---prettier.useEditorConfig": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.lightbulb.enabled": false,
   "editor.lineHeight": 22,
-  "editor.fontLigatures": true,
-  "editor.fontFamily": "JetBrains Mono",
-  "explorer.autoReveal": false,
-  "workbench.colorTheme": "Tokyo Night Light",
+  "editor.minimap.enabled": false,
+  "editor.smoothScrolling": true,
+  "editor.tabSize": 2,
+  "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
+  "editor.wordWrapColumn": 100,
+  "editor.codeLens": true,
+  "editor.cursorBlinking": "solid",
+  // * emmet
+  "emmet.showSuggestionsAsSnippets": false,
+  "emmet.triggerExpansionOnTab": false,
+  "emmet.includeLanguages": {
+    "nunjucks": "html",
+    "javascript": "javascriptreact"
+  },
+  "emmet.excludeLanguages": ["javascriptreact", "typescriptreact"],
+  "editor.snippetSuggestions": "inline",
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.suggest.localityBonus": true,
+
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.quickSuggestionsDelay": 100,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggest.showWords": false,
+  "editor.suggest.showDeprecated": false,
+  "editor.wordBasedSuggestions": false,
+  // * files
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  // * colors
   "editor.tokenColorCustomizations": {
+    "[Tokyo Night Storm]": {
+      "comments": "#3070de"
+    },
     "[Community Material Theme Darker]": {
       "comments": "#56618f"
     }
@@ -31,7 +103,7 @@
       "dropdown.foreground": "#2e4663",
       // editor
       "editor.background": "#19273f",
-      "editor.lineHighlightBackground": "#142642",
+      "editor.lineHighlightBackground": "#1a2d49",
       "editorGroupHeader.tabsBackground": "#0b1b2f",
       "editorGroupHeader.noTabsBackground": "#0b1b2f",
       "breadcrumb.background": "#0b1b2f",
@@ -53,7 +125,6 @@
       "list.activeSelectionBackground": "#104391",
       "list.inactiveSelectionBackground": "#050e18",
       "list.hoverBackground": "#07111d",
-
       // sidbar
       "sideBar.background": "#0b1b2f",
       "sideBarSectionHeader.background": "#081422",
@@ -64,34 +135,62 @@
       "scrollbarSlider.activeBackground": "#2e4663"
     }
   },
-  "files.autoSave": "onFocusChange",
-  "editor.tabSize": 2,
-  "editor.cursorStyle": "line-thin",
-  "editor.wordWrapColumn": 100,
-  "window.zoomLevel": 1,
-  "workbench.iconTheme": "material-icon-theme",
-  "editor.suggestSelection": "first",
+  // * plugins
+  "gitlens.showWhatsNewAfterUpgrades": false,
+  "gitlens.showWelcomeOnInstall": false,
+  "gitlens.hovers.enabled": true,
+  "gitlens.statusBar.enabled": false,
+  "window.zoomLevel": 2,
+  "gitPrefix.patternIgnoreCase": true,
+  "gitPrefix.replacement": "[$1] ",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.codeLens.scopes": ["document", "containers", "blocks"],
+  "auto-close-tag.SublimeText3Mode": true,
+  "autoimport.autoComplete": false,
+  "postfix.customTemplates": [
+    {
+      "name": "useState",
+      "body": "const [{{expr}}, set{{expr:capitalize}}] = useState($1)",
+      "description": "React useState",
+      "when": []
+    },
+    {
+      "name": "/>",
+      "body": "<{{expr}} />",
+      "description": "<{{expr}} />",
+      "when": []
+    },
+    {
+      "name": ">",
+      "body": "<$RANDOM {{expr}}>$1</{{expr}}>",
+      "description": "<{{expr}} />",
+      "when": []
+    },
+  ],
+  "surround.showOnlyUserDefinedSnippets": true,
+  "surround.with.arrowFunction": {
+    "label": "arrowFunction",
+    "description": "const $name = ($params) => { ... }",
+    "disabled": false,
+    "snippet": "const ${1:fnName} = (${2:params}) => {\n\t$TM_SELECTED_TEXT\n}$0"
+  },
+  "surround.custom": {
+    "jsxMap": {
+      "label": "jsxMap",
+      "description": "",
+      "disabled": false,
+      "snippet": "{$1.map((it) => {\n return (\n\t$TM_SELECTED_TEXT\n)\n})}"
+    }
+  },
+  "jest.enableSnapshotUpdateMessages": false,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "editor.formatOnSave": true,
-  "prettier.useEditorConfig": false,
-  "workbench.editor.enablePreview": false,
-  "cSpell.userWords": ["devtool", "firestore"],
-  "breadcrumbs.enabled": false,
-  "workbench.startupEditor": "none",
+  "cSpell.userWords": ["devtool", "firestore", "testid"],
   "material-icon-theme.activeIconPack": "react_redux",
-  "workbench.statusBar.visible": false,
+  "material-icon-theme.hidesExplorerArrows": true,
   "material-icon-theme.folders.associations": {
     "elm": "functions",
     "session": "core",
     "proxy": "ngrx-store",
     "nginx": "ngrx-store"
-  },
-  "material-icon-theme.hidesExplorerArrows": true,
-  "typescript.preferences.importModuleSpecifier": "relative",
-  "emmet.includeLanguages": {
-    "nunjucks": "html"
-  },
-  "javascript.preferences.importModuleSpecifier": "relative",
-  "javascript.preferences.importModuleSpecifierEnding": "minimal",
-  "javascript.preferences.quoteStyle": "single"
+  }
 }
