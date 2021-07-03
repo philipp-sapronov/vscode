@@ -165,7 +165,7 @@
       "body": "<$RANDOM {{expr}}>$1</{{expr}}>",
       "description": "<{{expr}} />",
       "when": []
-    },
+    }
   ],
   "surround.showOnlyUserDefinedSnippets": true,
   "surround.with.arrowFunction": {
