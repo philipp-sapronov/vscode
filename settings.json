@@ -1,7 +1,6 @@
 {
   // * common
   "update.showReleaseNotes": false,
-  "breadcrumbs.enabled": false,
   // * javascript/typescript
   "javascript.preferences.importModuleSpecifier": "relative",
   "javascript.preferences.importModuleSpecifierEnding": "minimal",
@@ -19,9 +18,9 @@
   "workbench.editor.labelFormat": "short",
   "workbench.editor.tabSizing": "short",
   "workbench.editor.untitled.hint": "hidden",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
-  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false,
   // * explorer
   "explorer.autoReveal": false,
   "explorer.compactFolders": false,
@@ -47,18 +46,10 @@
   "editor.wordWrapColumn": 100,
   "editor.codeLens": true,
   "editor.cursorBlinking": "solid",
-  // * emmet
-  "emmet.showSuggestionsAsSnippets": false,
-  "emmet.triggerExpansionOnTab": false,
-  "emmet.includeLanguages": {
-    "nunjucks": "html",
-    "javascript": "javascriptreact"
-  },
-  "emmet.excludeLanguages": ["javascriptreact", "typescriptreact"],
+  // * editor suggestions
   "editor.snippetSuggestions": "inline",
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.suggest.localityBonus": true,
-
   "editor.quickSuggestions": {
     "other": true,
     "comments": false,
@@ -69,6 +60,13 @@
   "editor.suggest.showWords": false,
   "editor.suggest.showDeprecated": false,
   "editor.wordBasedSuggestions": false,
+  // * emmet
+  "emmet.showSuggestionsAsSnippets": false,
+  "emmet.triggerExpansionOnTab": false,
+  "emmet.includeLanguages": {
+    "nunjucks": "html"
+  },
+  "emmet.excludeLanguages": ["javascriptreact", "typescriptreact"],
   // * files
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
@@ -78,9 +76,6 @@
   "editor.tokenColorCustomizations": {
     "[Tokyo Night Storm]": {
       "comments": "#3070de"
-    },
-    "[Community Material Theme Darker]": {
-      "comments": "#56618f"
     }
   },
   "workbench.colorCustomizations": {
@@ -93,8 +88,23 @@
     },
     "[Tokyo Night Storm]": {
       "activityBar.activeBackground": "#0a2957",
-      "activityBar.background": "#000000",
-      "activityBar.activeBorder": "#1259c4",
+      "activityBar.inactiveForeground": "#3f4c63",
+      "activityBar.background": "#0b1b2f",
+      "activityBar.foreground": "#869bb9",
+      "activityBar.border": "#0b1b2f",
+      "activityBar.activeBorder": "#0a2957",
+      "activityBarBadge.background": "#0b1b2f",
+      "activityBarBadge.foreground": "#869bb9",
+      // sidbar
+      "sideBar.background": "#0b1b2f",
+      "sideBar.foreground": "#9da0b9",
+      "sideBarSectionHeader.background": "#0b1b2f",
+      "sideBarSectionHeader.border": "#081422",
+      // list
+      "list.activeSelectionBackground": "#104391",
+      "list.inactiveSelectionBackground": "#061526",
+      "list.hoverBackground": "#061526",
+
       // editor popup
       "editorSuggestWidget.background": "#0b1b2f",
       "editorSuggestWidget.highlightForeground": "#5682c4",
@@ -104,31 +114,27 @@
       // editor
       "editor.background": "#19273f",
       "editor.lineHighlightBackground": "#1a2d49",
+      // "editorCodeLens.foreground": "#3070de",
       "editorGroupHeader.tabsBackground": "#0b1b2f",
       "editorGroupHeader.noTabsBackground": "#0b1b2f",
+      // breadcrumb
       "breadcrumb.background": "#0b1b2f",
+      // input
       "input.background": "#091627",
       // terminal
+      "statusBar.background": "#081524",
       "terminal.background": "#0b1b2f",
+      "panel.background": "#0b1b2f",
+      // tabs
       "tab.activeBackground": "#142642",
       "tab.activeBorder": "#142642",
-      "panel.background": "#0b1b2f",
-      "statusBar.background": "#081524",
-      // tabs
       "tab.inactiveBackground": "#0b1b2f",
       "tab.activeForeground": "#6c7c91",
       // panel
       "panelTitle.activeBorder": "#104391",
       "panelTitle.inactiveForeground": "#2e4663",
       "panelTitle.activeForeground": "#6c7c91",
-      // list
-      "list.activeSelectionBackground": "#104391",
-      "list.inactiveSelectionBackground": "#050e18",
-      "list.hoverBackground": "#07111d",
-      // sidbar
-      "sideBar.background": "#0b1b2f",
-      "sideBarSectionHeader.background": "#081422",
-      "sideBar.foreground": "#9da0b9",
+
       // scrollbar
       "scrollbarSlider.background": "#22344b",
       "scrollbarSlider.hoverBackground": "#2e4663",
@@ -165,7 +171,7 @@
       "body": "<$RANDOM {{expr}}>$1</{{expr}}>",
       "description": "<{{expr}} />",
       "when": []
-    },
+    }
   ],
   "surround.showOnlyUserDefinedSnippets": true,
   "surround.with.arrowFunction": {
@@ -192,5 +198,56 @@
     "session": "core",
     "proxy": "ngrx-store",
     "nginx": "ngrx-store"
-  }
+  },
+  "breadcrumbs.enabled": false,
+  // * activitusbar
+  "activitusbar.activeColour": "#9da0b9",
+  "activitusbar.inactiveColour": "#9da0b9",
+  "activitusbar.showSourceControlCounter": true,
+  "activitusbar.toggleSidebar": false,
+  "activitusbar.views": [
+    {
+      "name": "command.workbench.action.previousSideBarView",
+      "codicon": "arrow-left"
+    },
+    {
+      "name": "command.workbench.action.nextSideBarView",
+      "codicon": "arrow-right"
+    },
+    {
+      "name": "explorer",
+      "codicon": "explorer-view-icon"
+    },
+    {
+      "name": "search",
+      "codicon": "search-view-icon"
+    },
+    {
+      "name": "scm",
+      "codicon": "source-control-view-icon"
+    },
+    {
+      "name": "command.workbench.view.extension.gitlens",
+      "codicon": "git-merge",
+      "label-": "gitLens"
+    },
+    {
+      "name": "command.workbench.view.extension.bookmarks",
+      "codicon": "bookmark",
+      "tooltip": "Bookmarks"
+    },
+    {
+      "name": "command.workbench.view.extension.project-manager",
+      "codicon": "folder",
+      "tooltip": "Bookmarks"
+    },
+    {
+      "name": "extensions",
+      "codicon": "extensions"
+    },
+    {
+      "name": "settings",
+      "codicon": "gear"
+    }
+  ]
 }
