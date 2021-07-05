@@ -7,23 +7,31 @@
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.suggest.paths": false,
+  "typescript.tsserver.trace": "off",
+  "typescript.suggest.autoImports": true,
+  "diffEditor.codeLens": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.disableAutomaticTypeAcquisition": true,
   // * window
+  "editor.rulers": [80, 120],
   "window.title": "${activeEditorLong}${separator}${rootName}",
   "window.newWindowDimensions": "inherit",
   // * workbench
   "workbench.colorTheme": "Tokyo Night Storm",
   "workbench.editor.decorations.badges": true,
-  "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
-  "workbench.editor.labelFormat": "short",
-  "workbench.editor.tabSizing": "short",
+  "workbench.editor.labelFormat": "default",
+  "workbench.editor.tabSizing": "shrink",
   "workbench.editor.untitled.hint": "hidden",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.editor.showIcons": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.tabCloseButton": "off", // ???
+  "workbench.editor.splitOnDragAndDrop": false,
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "workbench.activityBar.visible": false,
   // * explorer
   "explorer.autoReveal": false,
-  "explorer.compactFolders": false,
   "explorer.sortOrder": "type",
   // * editor
   "editor.cursorSmoothCaretAnimation": true,
@@ -60,6 +68,17 @@
   "editor.suggest.showWords": false,
   "editor.suggest.showDeprecated": false,
   "editor.wordBasedSuggestions": false,
+  "editor.folding": false,
+  "editor.lineNumbers": "off",
+  "editor.autoClosingBrackets": "beforeWhitespace", // ???
+  "editor.codeLensFontFamily": "JetBrains Mono",
+  "editor.colorDecorators": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "peek",
+  "editor.hover.delay": 2000,
   // * emmet
   "emmet.showSuggestionsAsSnippets": false,
   "emmet.triggerExpansionOnTab": false,
@@ -67,8 +86,6 @@
     "nunjucks": "html"
   },
   "emmet.excludeLanguages": ["javascriptreact", "typescriptreact"],
-  // * files
-  "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
@@ -87,6 +104,7 @@
       "list.activeSelectionBackground": "#ceced4"
     },
     "[Tokyo Night Storm]": {
+      "editorRuler.foreground": "#162539",
       "activityBar.activeBackground": "#0a2957",
       "activityBar.inactiveForeground": "#3f4c63",
       "activityBar.background": "#0b1b2f",
@@ -101,13 +119,15 @@
       "sideBarSectionHeader.background": "#0b1b2f",
       "sideBarSectionHeader.border": "#081422",
       // list
-      "list.activeSelectionBackground": "#104391",
+      "list.activeSelectionBackground": "#3740b6",
       "list.inactiveSelectionBackground": "#061526",
       "list.hoverBackground": "#061526",
 
       // editor popup
       "editorSuggestWidget.background": "#0b1b2f",
-      "editorSuggestWidget.highlightForeground": "#5682c4",
+      "editorSuggestWidget.highlightForeground": "#6473e6",
+      "editorSuggestWidget.selectedBackground": "#3740b6",
+
       "editorHoverWidget.background": "#0b1b2f",
       "dropdown.background": "#0b1b2f",
       "dropdown.foreground": "#2e4663",
@@ -122,7 +142,7 @@
       // input
       "input.background": "#091627",
       // terminal
-      "statusBar.background": "#081524",
+      "statusBar.background": "#050e18",
       "terminal.background": "#0b1b2f",
       "panel.background": "#0b1b2f",
       // tabs
@@ -131,7 +151,7 @@
       "tab.inactiveBackground": "#0b1b2f",
       "tab.activeForeground": "#6c7c91",
       // panel
-      "panelTitle.activeBorder": "#104391",
+      "panelTitle.activeBorder": "#3740b6",
       "panelTitle.inactiveForeground": "#2e4663",
       "panelTitle.activeForeground": "#6c7c91",
 
@@ -192,7 +212,6 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "cSpell.userWords": ["devtool", "firestore", "testid"],
   "material-icon-theme.activeIconPack": "react_redux",
-  "material-icon-theme.hidesExplorerArrows": true,
   "material-icon-theme.folders.associations": {
     "elm": "functions",
     "session": "core",
@@ -248,6 +267,21 @@
     {
       "name": "settings",
       "codicon": "gear"
+    },
+    {
+      "name": "command.workbench.action.togglePanel",
+      "codicon": "terminal"
     }
-  ]
+  ],
+  "explorer.compactFolders": false,
+  "material-icon-theme.hidesExplorerArrows": true,
+  "jest.autoRun": {
+    "watch": false,
+    "onSave": "test-file"
+  },
+
+  "npm.packageManager": "yarn",
+  "eslint.packageManager": "yarn",
+  "explorer.openEditors.visible": 0,
+  "files.autoSave": "onFocusChange"
 }
