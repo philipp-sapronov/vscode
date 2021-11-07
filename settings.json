@@ -2,52 +2,61 @@
   // * common
   "update.showReleaseNotes": false,
   // * javascript/typescript
-  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "project-relative",
   "javascript.preferences.importModuleSpecifierEnding": "minimal",
   "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.suggest.paths": false,
+  "typescript.tsserver.trace": "off",
+  "typescript.suggest.autoImports": true,
+  "diffEditor.codeLens": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.disableAutomaticTypeAcquisition": true,
   // * window
-  "window.title": "${activeEditorLong}${separator}${rootName}",
+  "window.title": "${rootName}",
   "window.newWindowDimensions": "inherit",
   // * workbench
   "workbench.colorTheme": "Tokyo Night Storm",
-  "workbench.editor.decorations.badges": true,
-  "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.labelFormat": "short",
-  "workbench.editor.tabSizing": "short",
-  "workbench.editor.untitled.hint": "hidden",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.showIcons": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.tabCloseButton": "right",
+  "workbench.editor.splitOnDragAndDrop": false,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 4,
+  "workbench.editor.pinnedTabSizing": "compact",
+  // "workbench.editor.openPositioning": "first",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
-  "workbench.activityBar.visible": false,
   // * explorer
   "explorer.autoReveal": false,
-  "explorer.compactFolders": false,
   "explorer.sortOrder": "type",
   // * editor
-  "editor.cursorSmoothCaretAnimation": true,
-  "editor.cursorStyle": "line-thin",
+  "editor.rulers": [80, 120],
+  "editor.cursorSmoothCaretAnimation": false,
+  "editor.cursorStyle": "block",
   "editor.fontFamily": "JetBrains Mono",
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": false,
   "editor.fontSize": 12,
   "editor.fontWeight": "300",
   "editor.formatOnSave": true,
-  "---prettier.useEditorConfig": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  },
+  "prettier.useEditorConfig": false,
+  "prettier.arrowParens": "always",
+  "editor.bracketPairColorization.enabled": true,
   "editor.lightbulb.enabled": false,
   "editor.lineHeight": 22,
-  "editor.minimap.enabled": false,
   "editor.smoothScrolling": true,
   "editor.tabSize": 2,
   "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
   "editor.wordWrapColumn": 100,
   "editor.codeLens": true,
+  // "editor.cursorWidth": 20,
   "editor.cursorBlinking": "solid",
+
   // * editor suggestions
-  "editor.snippetSuggestions": "inline",
+  "editor.snippetSuggestions": "bottom",
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.suggest.localityBonus": true,
   "editor.quickSuggestions": {
@@ -59,16 +68,30 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggest.showWords": false,
   "editor.suggest.showDeprecated": false,
-  "editor.wordBasedSuggestions": false,
+  "editor.folding": false,
+  "editor.lineNumbers": "off",
+  "editor.autoClosingBrackets": "beforeWhitespace",
+  "editor.codeLensFontFamily": "JetBrains Mono",
+  "editor.colorDecorators": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "peek",
+  "editor.hover.delay": 500,
   // * emmet
   "emmet.showSuggestionsAsSnippets": false,
-  "emmet.triggerExpansionOnTab": false,
+
+  "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
-    "nunjucks": "html"
+    "nunjucks": "html",
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
   },
-  "emmet.excludeLanguages": ["javascriptreact", "typescriptreact"],
-  // * files
-  "files.autoSave": "onFocusChange",
+
+  "files.associations": {
+    "*.css": "postcss"
+  },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
@@ -79,6 +102,10 @@
     }
   },
   "workbench.colorCustomizations": {
+    "[GitHub Light Default]": {
+      "statusBar.background": "#050e18",
+      "statusBar.foreground": "#9da0b9"
+    },
     "[Tokyo Night Light]": {
       "editor.background": "#d9d9dd",
       "sideBar.background": "#d6d6db",
@@ -87,6 +114,7 @@
       "list.activeSelectionBackground": "#ceced4"
     },
     "[Tokyo Night Storm]": {
+      "editorRuler.foreground": "#162539",
       "activityBar.activeBackground": "#0a2957",
       "activityBar.inactiveForeground": "#3f4c63",
       "activityBar.background": "#0b1b2f",
@@ -95,19 +123,21 @@
       "activityBar.activeBorder": "#0a2957",
       "activityBarBadge.background": "#0b1b2f",
       "activityBarBadge.foreground": "#869bb9",
+      "editorCursor.foreground": "#869bb9",
+      "editorCursor.background": "#000",
       // sidbar
       "sideBar.background": "#0b1b2f",
       "sideBar.foreground": "#9da0b9",
       "sideBarSectionHeader.background": "#0b1b2f",
       "sideBarSectionHeader.border": "#081422",
       // list
-      "list.activeSelectionBackground": "#104391",
+      "list.activeSelectionBackground": "#3740b6",
       "list.inactiveSelectionBackground": "#061526",
       "list.hoverBackground": "#061526",
-
       // editor popup
       "editorSuggestWidget.background": "#0b1b2f",
-      "editorSuggestWidget.highlightForeground": "#5682c4",
+      "editorSuggestWidget.highlightForeground": "#6473e6",
+      "editorSuggestWidget.selectedBackground": "#3740b6",
       "editorHoverWidget.background": "#0b1b2f",
       "dropdown.background": "#0b1b2f",
       "dropdown.foreground": "#2e4663",
@@ -122,7 +152,8 @@
       // input
       "input.background": "#091627",
       // terminal
-      "statusBar.background": "#081524",
+      "statusBar.background": "#040b13",
+      "statusBar.foreground": "#597293",
       "terminal.background": "#0b1b2f",
       "panel.background": "#0b1b2f",
       // tabs
@@ -131,10 +162,9 @@
       "tab.inactiveBackground": "#0b1b2f",
       "tab.activeForeground": "#6c7c91",
       // panel
-      "panelTitle.activeBorder": "#104391",
+      "panelTitle.activeBorder": "#3740b6",
       "panelTitle.inactiveForeground": "#2e4663",
       "panelTitle.activeForeground": "#6c7c91",
-
       // scrollbar
       "scrollbarSlider.background": "#22344b",
       "scrollbarSlider.hoverBackground": "#2e4663",
@@ -151,103 +181,177 @@
   "gitPrefix.replacement": "[$1] ",
   "gitlens.codeLens.enabled": false,
   "gitlens.codeLens.scopes": ["document", "containers", "blocks"],
-  "auto-close-tag.SublimeText3Mode": true,
-  "autoimport.autoComplete": false,
-  "postfix.customTemplates": [
-    {
-      "name": "useState",
-      "body": "const [{{expr}}, set{{expr:capitalize}}] = useState($1)",
-      "description": "React useState",
-      "when": []
-    },
-    {
-      "name": "/>",
-      "body": "<{{expr}} />",
-      "description": "<{{expr}} />",
-      "when": []
-    },
-    {
-      "name": ">",
-      "body": "<$RANDOM {{expr}}>$1</{{expr}}>",
-      "description": "<{{expr}} />",
-      "when": []
-    }
-  ],
-  "surround.showOnlyUserDefinedSnippets": true,
-  "surround.with.arrowFunction": {
-    "label": "arrowFunction",
-    "description": "const $name = ($params) => { ... }",
-    "disabled": false,
-    "snippet": "const ${1:fnName} = (${2:params}) => {\n\t$TM_SELECTED_TEXT\n}$0"
-  },
-  "surround.custom": {
-    "jsxMap": {
-      "label": "jsxMap",
-      "description": "",
-      "disabled": false,
-      "snippet": "{$1.map((it) => {\n return (\n\t$TM_SELECTED_TEXT\n)\n})}"
-    }
-  },
   "jest.enableSnapshotUpdateMessages": false,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "cSpell.userWords": ["devtool", "firestore", "testid"],
+  "cSpell.userWords": [
+    "devtool",
+    "firestore",
+    "lookback",
+    "middlewares",
+    "testid",
+    "unmount",
+    "unmounts"
+  ],
   "material-icon-theme.activeIconPack": "react_redux",
-  "material-icon-theme.hidesExplorerArrows": true,
   "material-icon-theme.folders.associations": {
     "elm": "functions",
     "session": "core",
     "proxy": "ngrx-store",
     "nginx": "ngrx-store"
   },
-  "breadcrumbs.enabled": false,
   // * activitusbar
-  "activitusbar.activeColour": "#9da0b9",
-  "activitusbar.inactiveColour": "#9da0b9",
+  // "activitusbar.alignment": "Right",
+  "activitusbar.activeColour": "#597293",
+  "activitusbar.inactiveColour": "#597293",
   "activitusbar.showSourceControlCounter": true,
   "activitusbar.toggleSidebar": false,
+  "macros": {
+    "toggleNpmView": [
+      { "command": "workbench.view.explorer" },
+      { "command": "npm.toggleVisibility" }
+    ]
+  },
   "activitusbar.views": [
     {
-      "name": "command.workbench.action.previousSideBarView",
-      "codicon": "arrow-left"
-    },
-    {
-      "name": "command.workbench.action.nextSideBarView",
-      "codicon": "arrow-right"
-    },
-    {
+      "label": "🪁 Explorer",
       "name": "explorer",
-      "codicon": "explorer-view-icon"
+      "codicon": "cebab",
+      "tooltip": "Explorer"
     },
     {
       "name": "search",
-      "codicon": "search-view-icon"
+      // "codicon": "cebab",
+      "codicon": "search-view-icon",
+      "tooltip": "Search",
+      "label": "Search "
     },
     {
+      "label": "Git",
       "name": "scm",
-      "codicon": "source-control-view-icon"
+      "codicon": "list-tree",
+      "tooltip": "Git"
     },
     {
+      // "id": "gitlens",
       "name": "command.workbench.view.extension.gitlens",
-      "codicon": "git-merge",
-      "label-": "gitLens"
+      "codicon": "source-control-view-icon",
+      "tooltip": "Git Lens",
+      "label": "Git Lens"
+      // "alignment": "left",
+      // "priority": 11
     },
     {
-      "name": "command.workbench.view.extension.bookmarks",
-      "codicon": "bookmark",
-      "tooltip": "Bookmarks"
+      "name": "command.workbench.view.extension.test",
+      "tooltip": "Jest",
+      "codicon": "test-view-icon",
+      "label": "Jest"
     },
     {
-      "name": "command.workbench.view.extension.project-manager",
-      "codicon": "folder",
-      "tooltip": "Bookmarks"
+      "id": "terminal",
+      "label": "🦋  Ƭ E Ʀ M I Ɲ Λ Ł  ",
+      "name": "command.workbench.action.togglePanel",
+      "tooltip": "Terminal",
+      "codicon": "cebab",
+      "alignment": "left",
+      "priority": 10
+    },
+  ],
+  "statusbar_command.commands": [
+    // {
+    //   "id": "terminal",
+    //   "label": "Terminal",
+    //   "command": "workbench.action.togglePanel",
+    //   "tooltip": "Terminal",
+    //   "text": "$(terminal) Terminal",
+    //   "alignment": "left",
+    //   "priority": 10,
+    // },
+
+    // on the right
+    {
+      "alignment": "right",
+      "command": "workbench.action.openWorkspaceSettings",
+      "id": "json_settings",
+      "name": "JSON Settings",
+      "text": "$(gear)",
+      "tooltip": "JSON Settings"
     },
     {
-      "name": "extensions",
-      "codicon": "extensions"
-    },
-    {
-      "name": "settings",
-      "codicon": "gear"
+      "alignment": "right",
+      "command": "workbench.view.extensions",
+      "id": "extensions",
+      "name": "Extensions",
+      "text": "$(extensions)",
+      "tooltip": "Extensions"
     }
-  ]
+  ],
+  "explorer.compactFolders": false,
+  "material-icon-theme.hidesExplorerArrows": true,
+  "jest.autoRun": {
+    "watch": false,
+    "onSave": "test-file"
+  },
+  "npm.scriptExplorerAction": "run",
+  "npm.packageManager": "yarn",
+  "eslint.packageManager": "yarn",
+  "explorer.openEditors.visible": 0,
+  "files.autoSave": "onFocusChange",
+  "regex-previewer.enableCodeLens": false,
+  "tabnine.experimentalAutoImports": true,
+  // "autoimport.filesToScan": "**/*.{ts,tsx}"
+  "auto-close-tag.enableAutoCloseSelfClosingTag": true,
+  "auto-close-tag.SublimeText3Mode": true,
+  "autoimport.autoComplete": true,
+  "auto-close-tag.insertSpaceBeforeSelfClosingTag": true,
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "javascriptreact",
+    "typescriptreact",
+    "markdown",
+    "HTML (EEx)",
+    "HTML (Eex)"
+  ],
+  // Rest Client
+  "rest-client.enableCustomVariableReferencesCodeLens": false,
+  "rest-client.rememberCookiesForSubsequentRequests": false,
+  "breadcrumbs.icons": false,
+  "breadcrumbs.symbolPath": "off",
+  "jest.enableSnapshotPreviews": true,
+  "editor.parameterHints.enabled": false,
+  "editor.inlayHints.fontSize": 100,
+  "editor.inlayHints.enabled": false,
+  "editor.scrollbar.horizontalScrollbarSize": 10,
+  "editor.scrollbar.verticalScrollbarSize": 10,
+  "workbench.editor.wrapTabs": true,
+  "terminal.integrated.defaultLocation": "editor",
+  "workbench.productIconTheme": "material-product-icons",
+  "workbench.editor.decorations.badges": false,
+  "editor.suggest.insertMode": "replace",
+  "tabnine.disable_file_regex": ["[.]css$"],
+  "workbench.activityBar.visible": false,
+  "editor.minimap.enabled": false,
+  "editor.inlineSuggest.enabled": false,
+  "editor.guides.bracketPairs": true,
+  // ESLINT
+  "editor.codeActionsOnSave": {
+    // "source.organizeImports": true,
+    "source.fixAll.eslint": true
+  },
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "typescript.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+  "typescript.preferences.jsxAttributeCompletionStyle": "auto",
+  "javascript.preferences.jsxAttributeCompletionStyle": "auto",
+  // inlay hints
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "redhat.telemetry.enabled": false
+
+  // "javascript.inlayHints.parameterNames.enabled": "all",
+  // "typescript.inlayHints.variableTypes.enabled": true,
+  // "typescript.inlayHints.parameterNames.enabled": "literals",
+  // "typescript.inlayHints.parameterTypes.enabled": true,
 }
