@@ -11,8 +11,8 @@
 4. Choose `vscode-settings-export.json` file
 
 #### Info
-Theme: Tokyo Night Storm
-Font: `operator-mono`
+- Theme: Tokyo Night Storm
+- Font: `operator-mono`
 
 #### Screenshots
 
