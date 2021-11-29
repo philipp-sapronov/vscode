@@ -16,6 +16,6 @@ Font: `operator-mono`
 
 #### Screenshots
 
-![Home](/res/home.jpg)
+![Home](/res/home.png)
 
-![Code](/res/code/code.png)
+![Code](/res/code.png)
